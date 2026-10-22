@@ -4,5 +4,6 @@ COPY index.html favicon.svg robots.txt sitemap.xml /usr/share/nginx/html/
 COPY css /usr/share/nginx/html/css
 COPY js /usr/share/nginx/html/js
 COPY cv /usr/share/nginx/html/cv
+COPY assets /usr/share/nginx/html/assets
 EXPOSE 80
 HEALTHCHECK CMD wget -qO- http://127.0.0.1/ >/dev/null || exit 1

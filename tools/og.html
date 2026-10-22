@@ -1,0 +1,37 @@
+<!doctype html>
+<!-- Fuente de assets/og.png (1200x630). Regenerar: ver tools/og.md -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Figtree:wght@500&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{--bg:#0e131c;--surface:#151c28;--line:#253041;--fg:#e8edf5;--muted:#93a0b4;--accent:#4cc9c0;--ok:#46c97d}
+*{box-sizing:border-box}
+html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:var(--bg)}
+.og{position:relative;width:1200px;height:630px;padding:72px 80px;display:flex;flex-direction:column;justify-content:space-between;color:var(--fg);font-family:Figtree,sans-serif;
+  background:radial-gradient(900px 500px at 100% 0%,color-mix(in srgb,var(--accent) 16%,transparent),transparent 70%),var(--bg)}
+.og::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;opacity:.35;
+  -webkit-mask-image:linear-gradient(115deg,transparent 45%,#000);mask-image:linear-gradient(115deg,transparent 45%,#000)}
+.og > *{position:relative;z-index:1}
+.brand{font:500 30px "JetBrains Mono",monospace}
+.brand b{color:var(--accent);font-weight:500}
+h1{font:800 104px/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.04em;margin:0}
+h1 em{font-style:normal;color:var(--accent)}
+.role{font-size:40px;color:var(--muted);margin-top:24px}
+.foot{display:flex;justify-content:space-between;align-items:center}
+.url{font:500 28px "JetBrains Mono",monospace;padding:14px 22px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.url::before{content:"~ $ ";color:var(--muted)}
+.dots{display:flex;gap:12px}.dots i{width:16px;height:16px;border-radius:50%;background:var(--line)}.dots i:last-child{background:var(--accent)}
+</style>
+</head>
+<body>
+<div class="og">
+  <div class="brand">tavo<b>lab</b>.io</div>
+  <div>
+    <h1>Gustavo <em>Medina</em></h1>
+    <div class="role">Soporte TI · Desarrollador full-stack</div>
+  </div>
+  <div class="foot"><span class="url">tavolab.io</span><span class="dots"><i></i><i></i><i></i></span></div>
+</div>
+</body>
+</html>
