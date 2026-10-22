@@ -15,7 +15,12 @@
 <meta property="og:title" content="Gustavo Medina · Desarrollador full-stack">
 <meta property="og:description" content="Proyectos web, móviles e IoT, con su arquitectura. Abierto a empleo y freelance.">
 <meta property="og:locale" content="es_MX">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://tavolab.io/assets/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gustavo Medina · Soporte TI · Desarrollador full-stack · tavolab.io">
+<meta name="twitter:card" content="summary_large_image">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,sans-serif;font-size:14px}img{max-width:100%}[hidden]{display:none!important}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -41,6 +46,7 @@
       <p class="lead">Soporte técnico y administración de sistemas Windows de día; desarrollo full-stack, apps móviles y automatización en mi propio servidor el resto del tiempo.</p>
       <div class="btns">
         <a class="btn primary" href="#proyectos">Ver proyectos</a>
+        <a class="btn" href="/cv/Gustavo-Medina-CV.pdf" download>Descargar CV ↓</a>
         <a class="btn" href="https://github.com/alexander1939" target="_blank" rel="noopener">GitHub ↗</a>
         <a class="btn" href="#contacto">Contactarme</a>
       </div>
@@ -50,7 +56,7 @@
       <div class="panel-top"><span class="lights"><i></i><i></i><i></i></span><span>~ $ gh repo list alexander1939</span></div>
       <div class="panel-body">
         <div class="row"><span>usuario</span><span class="v">@alexander1939</span></div>
-        <div class="row"><span>repos</span><span class="v">24 públicos</span></div>
+        <div class="row"><span>proyectos</span><span class="v" id="nproj">13 en este sitio</span></div>
         <div class="row"><span>rol</span><span class="v">Soporte técnico · Dev full-stack</span></div>
       </div>
       <div class="gh-langs" id="langs"><span class="label">tecnologías en mis proyectos</span></div>
@@ -58,7 +64,7 @@
   </header>
 </div>
 
-<div class="marquee" aria-label="Tecnologías que uso">
+<div class="marquee" role="group" aria-label="Tecnologías que uso">
   <div class="track" id="track"></div>
 </div>
 
@@ -85,7 +91,18 @@
         <div class="tags"></div>
         <div class="card-links"><span>Repositorio privado</span></div>
         </div>
-        <div class="dg-host" aria-label="Arquitectura de Evaluación Docente UDM"></div>
+        <figure class="dg-host" aria-label="Arquitectura de Evaluación Docente UDM"></figure>
+      </article>
+      <article class="card big" data-id="chambabot" data-tech="TypeScript,Node.js,Fastify,Zod,PostgreSQL,Drizzle,Redis,BullMQ,Ollama,JWT,argon2,Vitest,Testcontainers,Docker,GitHub Actions,CI/CD,GHCR,Dokploy">
+        <div class="big-main">
+        <div class="card-top"><span class="label">Automatización · API + worker</span><span class="pill wip">En desarrollo</span></div>
+        <h3>ChambaBot</h3>
+        <p>Busca vacantes en APIs de empleo y en las alertas por correo de Computrabajo, Indeed y LinkedIn, las filtra, las califica con IA contra mi perfil y me ayuda a postularme y dar seguimiento.</p>
+        <ul><li>Monolito modular hexagonal (ports &amp; adapters) con dos procesos, api y worker, sobre la misma imagen</li><li>Fastify + Zod, PostgreSQL con Drizzle ORM, colas y cron con Redis + BullMQ</li><li>Calificación con IA local (Ollama, qwen3.5:4b); autenticación con JWT + argon2</li><li>Casi 500 tests con Vitest y Testcontainers (Postgres y Redis reales), cobertura por archivo y reglas de lint que protegen las capas</li><li>Git Flow, GitHub Actions (lint, tipos, tests, build), imagen en GHCR, releases con versionado semántico y deploy automático a Dokploy por webhook</li><li>Planeado: app móvil y avisos por Telegram</li></ul>
+        <div class="tags"></div>
+        <div class="card-links"><span>Repositorio privado</span></div>
+        </div>
+        <figure class="dg-host" aria-label="Arquitectura de ChambaBot"></figure>
       </article>
       <article class="card" data-id="santander" data-tech="React,TypeScript,Laravel,PHP,Tailwind,Inertia,Radix UI,GitHub Actions,CI/CD">
         <div class="card-top"><span class="label">Sitio corporativo · Logística</span><span class="pill">Cliente real</span></div>
@@ -94,7 +111,7 @@
         <ul><li>Bolsa de trabajo con postulación y CV adjunto (PDF o Word) que llega por correo</li><li>Formulario de contacto validado y panel interno con login en dos pasos</li><li>Laravel 12 con Inertia, React 19 y Tailwind 4; lint y pruebas en GitHub Actions</li></ul>
         <div class="tags"></div>
         <div class="card-links"><span>Repositorio privado</span><button type="button" class="arch-btn" aria-expanded="false">Ver arquitectura</button></div>
-        <div class="dg-over" aria-label="Arquitectura de SantanderLT"><div class="dg-head"><span class="label">Arquitectura</span><b>SantanderLT</b></div><div class="dg-host"></div></div>
+        <figure class="dg-over" aria-label="Arquitectura de SantanderLT"><div class="dg-head"><span class="label">Arquitectura</span><b>SantanderLT</b></div><div class="dg-host"></div></figure>
       </article>
       <article class="card" data-id="onlycation" data-tech="React,TypeScript,Tailwind,PWA,Flutter,Dart,Python,FastAPI,SQLAlchemy,JWT,Stripe,Docker,Prometheus,Grafana">
         <div class="card-top"><span class="label">Plataforma educativa · Web + API + móvil</span><span class="pill">Proyecto completo</span></div>
@@ -103,7 +120,7 @@
         <ul><li>API en FastAPI con más de 20 módulos, pagos y reembolsos con Stripe</li><li>Web en React 19 instalable como app (PWA) y app en Flutter</li><li>Monitoreo con Prometheus y Grafana</li></ul>
         <div class="tags"></div>
         <div class="card-links"><a href="https://github.com/alexander1939/OnlyCation_Frontend" target="_blank" rel="noopener">Web ↗</a><a href="https://github.com/alexander1939/onlycation-apis" target="_blank" rel="noopener">API ↗</a><a href="https://github.com/alexander1939/OnlycationApp" target="_blank" rel="noopener">App ↗</a><button type="button" class="arch-btn" aria-expanded="false">Ver arquitectura</button></div>
-        <div class="dg-over" aria-label="Arquitectura de OnlyCation"><div class="dg-head"><span class="label">Arquitectura</span><b>OnlyCation</b></div><div class="dg-host"></div></div>
+        <figure class="dg-over" aria-label="Arquitectura de OnlyCation"><div class="dg-head"><span class="label">Arquitectura</span><b>OnlyCation</b></div><div class="dg-host"></div></figure>
       </article>
       <article class="card" data-id="dispensador" data-tech="Arduino,C++,Python,MySQL">
         <div class="card-top"><span class="label">IoT · Hardware</span><span class="pill">Proyecto en equipo</span></div>
@@ -112,7 +129,7 @@
         <ul><li>Sensores ultrasónicos miden el nivel del plato y del depósito</li><li>Servos abren el paso por horario o por comando</li><li>App en Python que guarda el historial en MySQL</li></ul>
         <div class="tags"></div>
         <div class="card-links"><a href="https://github.com/Emmanueloz/dispensador" target="_blank" rel="noopener">Ver código ↗</a><button type="button" class="arch-btn" aria-expanded="false">Ver arquitectura</button></div>
-        <div class="dg-over" aria-label="Arquitectura de Dispensador para mascotas"><div class="dg-head"><span class="label">Arquitectura</span><b>Dispensador para mascotas</b></div><div class="dg-host"></div></div>
+        <figure class="dg-over" aria-label="Arquitectura de Dispensador para mascotas"><div class="dg-head"><span class="label">Arquitectura</span><b>Dispensador para mascotas</b></div><div class="dg-host"></div></figure>
       </article>
       <article class="card" data-id="chamos" data-tech="Python,Flask,MySQL,SQLAlchemy,JWT,JavaScript,HTML/CSS">
         <div class="card-top"><span class="label">Sistema web · Flask</span><span class="pill">Proyecto completo</span></div>
@@ -121,7 +138,7 @@
         <ul><li>Login con verificación en dos pasos y control de sesiones activas</li><li>Recuperación de contraseña por correo, SMS o preguntas</li><li>Catálogos con alta, edición, filtros y permisos por usuario</li></ul>
         <div class="tags"></div>
         <div class="card-links"><a href="https://github.com/alexander1939/chamos" target="_blank" rel="noopener">Ver código ↗</a><button type="button" class="arch-btn" aria-expanded="false">Ver arquitectura</button></div>
-        <div class="dg-over" aria-label="Arquitectura de Chamos"><div class="dg-head"><span class="label">Arquitectura</span><b>Chamos</b></div><div class="dg-host"></div></div>
+        <figure class="dg-over" aria-label="Arquitectura de Chamos"><div class="dg-head"><span class="label">Arquitectura</span><b>Chamos</b></div><div class="dg-host"></div></figure>
       </article>
       <article class="card" data-id="taskmanager" data-tech="Java,Spring Boot,React,TypeScript,MariaDB,Vite">
         <div class="card-top"><span class="label">API REST + SPA</span><span class="pill">Proyecto completo</span></div>
@@ -130,16 +147,7 @@
         <ul><li>Arquitectura por capas: controller, service, repository y DTOs</li><li>Manejo global de errores y validación de datos</li><li>Persistencia con JPA sobre MariaDB</li></ul>
         <div class="tags"></div>
         <div class="card-links"><a href="https://github.com/alexander1939/spring-with-react" target="_blank" rel="noopener">Ver código ↗</a><button type="button" class="arch-btn" aria-expanded="false">Ver arquitectura</button></div>
-        <div class="dg-over" aria-label="Arquitectura de TaskManager"><div class="dg-head"><span class="label">Arquitectura</span><b>TaskManager</b></div><div class="dg-host"></div></div>
-      </article>
-      <article class="card" data-id="chambabot" data-tech="Docker,Dokploy,CI/CD">
-        <div class="card-top"><span class="label">Automatización · API</span><span class="pill wip">En desarrollo</span></div>
-        <h3>ChambaBot</h3>
-        <p>Busca vacantes que coinciden con mi perfil y me manda un resumen por correo.</p>
-        <ul><li>Arquitectura basada en API, desplegada con Dokploy en mi VPS</li><li>Planeado: app móvil y avisos por Telegram</li><li>Postular desde la app con mi CV y seguir el estado</li></ul>
-        <div class="tags"></div>
-        <div class="card-links"><span>Repositorio privado</span><button type="button" class="arch-btn" aria-expanded="false">Ver arquitectura</button></div>
-        <div class="dg-over" aria-label="Arquitectura de ChambaBot"><div class="dg-head"><span class="label">Arquitectura</span><b>ChambaBot</b></div><div class="dg-host"></div></div>
+        <figure class="dg-over" aria-label="Arquitectura de TaskManager"><div class="dg-head"><span class="label">Arquitectura</span><b>TaskManager</b></div><div class="dg-host"></div></figure>
       </article>
       <article class="card" data-id="inventario" data-tech="Flutter,Dart,Excel">
         <div class="card-top"><span class="label">Trabajo · Inventario</span><span class="pill">En uso</span></div>
@@ -148,7 +156,7 @@
         <ul><li>App en Flutter que escanea etiquetas y códigos de barras</li><li>Captura de serie, marca y modelo sin errores de dedo</li><li>Todo se guarda en un solo Excel, sin costo de infraestructura</li></ul>
         <div class="tags"></div>
         <div class="card-links"><span>Repositorio privado</span><button type="button" class="arch-btn" aria-expanded="false">Ver arquitectura</button></div>
-        <div class="dg-over" aria-label="Arquitectura de Inventario de sucursales"><div class="dg-head"><span class="label">Arquitectura</span><b>Inventario de sucursales</b></div><div class="dg-host"></div></div>
+        <figure class="dg-over" aria-label="Arquitectura de Inventario de sucursales"><div class="dg-head"><span class="label">Arquitectura</span><b>Inventario de sucursales</b></div><div class="dg-host"></div></figure>
       </article>
       <article class="card" data-id="gifexpert" data-tech="React,JavaScript,Vite,Netlify">
         <div class="card-top"><span class="label">Web · API externa</span><span class="pill">Desplegado</span></div>
@@ -157,7 +165,7 @@
         <ul><li>Custom hook para obtener y mostrar resultados</li><li>Componentes reutilizables con hooks de React</li><li>Publicado en Netlify</li></ul>
         <div class="tags"></div>
         <div class="card-links"><a href="https://github.com/alexander1939/git-expert-App" target="_blank" rel="noopener">Ver código ↗</a><a href="https://deluxe-baklava-8c0554.netlify.app" target="_blank" rel="noopener">Ver demo ↗</a><button type="button" class="arch-btn" aria-expanded="false">Ver arquitectura</button></div>
-        <div class="dg-over" aria-label="Arquitectura de GifExpertApp"><div class="dg-head"><span class="label">Arquitectura</span><b>GifExpertApp</b></div><div class="dg-host"></div></div>
+        <figure class="dg-over" aria-label="Arquitectura de GifExpertApp"><div class="dg-head"><span class="label">Arquitectura</span><b>GifExpertApp</b></div><div class="dg-host"></div></figure>
       </article>
       <article class="card" data-id="gastromundo" data-tech="React,TypeScript,Leaflet,OpenStreetMap,Gemini,Vite">
         <div class="card-top"><span class="label">Web · Mapas + IA</span><span class="pill">Proyecto</span></div>
@@ -166,7 +174,7 @@
         <ul><li>Mapa con Leaflet y datos de OpenStreetMap vía Nominatim y Overpass</li><li>Recetas tradicionales generadas con la API de Gemini</li><li>Pestaña de eventos y fiestas, con diseño responsivo</li></ul>
         <div class="tags"></div>
         <div class="card-links"><a href="https://github.com/alexander1939/GastroMundo" target="_blank" rel="noopener">Ver código ↗</a><button type="button" class="arch-btn" aria-expanded="false">Ver arquitectura</button></div>
-        <div class="dg-over" aria-label="Arquitectura de GastroMundo"><div class="dg-head"><span class="label">Arquitectura</span><b>GastroMundo</b></div><div class="dg-host"></div></div>
+        <figure class="dg-over" aria-label="Arquitectura de GastroMundo"><div class="dg-head"><span class="label">Arquitectura</span><b>GastroMundo</b></div><div class="dg-host"></div></figure>
       </article>
       <article class="card" data-id="favoritemovie" data-tech="Flutter,Dart,Firebase">
         <div class="card-top"><span class="label">Móvil · Firebase</span><span class="pill">Proyecto</span></div>
@@ -175,7 +183,7 @@
         <ul><li>Inicio de sesión con Firebase Auth</li><li>Compila para Android, web, Windows y Linux</li></ul>
         <div class="tags"></div>
         <div class="card-links"><a href="https://github.com/alexander1939/FavoriteMovile" target="_blank" rel="noopener">Ver código ↗</a><button type="button" class="arch-btn" aria-expanded="false">Ver arquitectura</button></div>
-        <div class="dg-over" aria-label="Arquitectura de FavoriteMovie"><div class="dg-head"><span class="label">Arquitectura</span><b>FavoriteMovie</b></div><div class="dg-host"></div></div>
+        <figure class="dg-over" aria-label="Arquitectura de FavoriteMovie"><div class="dg-head"><span class="label">Arquitectura</span><b>FavoriteMovie</b></div><div class="dg-host"></div></figure>
       </article>
       <article class="card" data-id="tavolab" data-tech="Linux,Docker,Dokploy,PostgreSQL,Ollama">
         <div class="card-top"><span class="label">Infraestructura</span><span class="pill">Activo</span></div>
@@ -184,7 +192,7 @@
         <ul><li>PostgreSQL central para monitorear cada base de datos</li><li>IA local con Ollama como servicio compartido</li><li>Despliegues por proyecto con contenedores</li></ul>
         <div class="tags"></div>
         <div class="card-links"><span>Repositorio privado</span><button type="button" class="arch-btn" aria-expanded="false">Ver arquitectura</button></div>
-        <div class="dg-over" aria-label="Arquitectura de tavolab · servidor propio"><div class="dg-head"><span class="label">Arquitectura</span><b>tavolab · servidor propio</b></div><div class="dg-host"></div></div>
+        <figure class="dg-over" aria-label="Arquitectura de tavolab · servidor propio"><div class="dg-head"><span class="label">Arquitectura</span><b>tavolab · servidor propio</b></div><div class="dg-host"></div></figure>
       </article>
       <article class="card" data-id="hyprland" data-tech="Linux,Hyprland,Python,HTML/CSS">
         <div class="card-top"><span class="label">Escritorio · Dotfiles</span><span class="pill">Activo</span></div>
@@ -193,7 +201,7 @@
         <ul><li>Paleta de Waybar generada desde el wallpaper con Python</li><li>Panel de ajustes rápidos con Google Calendar vía OAuth</li><li>Lockscreen con estética glass y widgets propios</li></ul>
         <div class="tags"></div>
         <div class="card-links"><a href="https://github.com/alexander1939/config-hyprland" target="_blank" rel="noopener">Ver código ↗</a><button type="button" class="arch-btn" aria-expanded="false">Ver arquitectura</button></div>
-        <div class="dg-over" aria-label="Arquitectura de Entorno Hyprland"><div class="dg-head"><span class="label">Arquitectura</span><b>Entorno Hyprland</b></div><div class="dg-host"></div></div>
+        <figure class="dg-over" aria-label="Arquitectura de Entorno Hyprland"><div class="dg-head"><span class="label">Arquitectura</span><b>Entorno Hyprland</b></div><div class="dg-host"></div></figure>
       </article>
     </div>
   </section>
@@ -205,9 +213,9 @@
     </div>
     <div class="stack">
       <div><h3>Frontend</h3><ul><li>React</li><li>JavaScript · TypeScript</li><li>Vite · TailwindCSS</li><li>HTML y CSS</li></ul></div>
-      <div><h3>Backend y datos</h3><ul><li>Node.js · Express</li><li>Python · Flask</li><li>Java · Spring Boot</li><li>PostgreSQL · MySQL · Redis</li></ul></div>
-      <div><h3>Móvil</h3><ul><li>Flutter · Dart</li><li>Firebase</li><li>React Native · Expo</li><li>Android SDK</li></ul></div>
-      <div><h3>DevOps y sistemas</h3><ul><li>Docker · Compose</li><li>Dokploy · VPS</li><li>Git · GitHub</li><li>Linux · Windows</li></ul></div>
+      <div><h3>Backend y datos</h3><ul><li>Node.js · Express</li><li>TypeScript · Fastify</li><li>Python · Flask</li><li>Java · Spring Boot</li><li>PostgreSQL · MySQL</li><li>Redis · BullMQ</li></ul></div>
+      <div><h3>Móvil</h3><ul><li>Flutter · Dart</li><li>Firebase</li><li>Android SDK</li></ul></div>
+      <div><h3>DevOps y sistemas</h3><ul><li>Docker · Compose</li><li>Dokploy · VPS</li><li>Git · GitHub</li><li>GitHub Actions · CI/CD</li><li>Ollama · IA local</li><li>Linux · Windows</li></ul></div>
     </div>
   </section>
 
@@ -228,12 +236,13 @@
     <div class="contact">
       <div>
         <span class="label">Contacto</span>
-        <h2 style="margin-top:10px">¿Buscas a alguien para tu equipo o tu proyecto? Platiquemos.</h2>
+        <h2>¿Buscas a alguien para tu equipo o tu proyecto? Platiquemos.</h2>
         <p>Busco una posición como desarrollador o en soporte y sistemas, y también tomo proyectos freelance de desarrollo web, apps móviles y automatización.</p>
       </div>
       <div class="links">
-        <div class="link"><div><div class="label">Correo</div><div class="val" id="v-mail">tavo@tavolab.io</div></div><button class="copy" data-copy="v-mail">Copiar</button></div>
-        <div class="link"><div><div class="label">WhatsApp</div><div class="val" id="v-tel">+52 961 448 0996</div></div><a class="go" href="https://wa.me/529614480996" target="_blank" rel="noopener">Escribir ↗</a></div>
+        <div class="link"><div><div class="label">Correo</div><div class="val" id="v-mail">tavo@tavolab.io</div></div><button type="button" class="copy" data-copy="v-mail">Copiar</button></div>
+        <div class="link"><div><div class="label">WhatsApp</div><div class="val">Mensaje directo</div></div><a class="go" href="https://wa.me/529614480996" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">Escribir ↗</a></div>
+        <div class="link"><div><div class="label">Currículum</div><div class="val">Gustavo-Medina-CV.pdf</div></div><a class="go" href="/cv/Gustavo-Medina-CV.pdf" download>Descargar ↓</a></div>
         <div class="link"><div><div class="label">GitHub</div><div class="val">github.com/alexander1939</div></div><a class="go" href="https://github.com/alexander1939" target="_blank" rel="noopener">Abrir ↗</a></div>
         <div class="link"><div><div class="label">LinkedIn</div><div class="val">in/gustavo-alexander-medina-cifuentes</div></div><a class="go" href="https://www.linkedin.com/in/gustavo-alexander-medina-cifuentes-429521445" target="_blank" rel="noopener">Abrir ↗</a></div>
       </div>

@@ -1,0 +1,39 @@
+name: Validar sitio
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  html:
+    name: HTML válido
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: html-validate
+        run: npx --yes html-validate@11.17.0 index.html tools/og.html
+
+  links:
+    name: Links rotos
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: lychee
+        uses: lycheeverse/lychee-action@v2.9.0
+        with:
+          fail: true
+          # Rutas como /cv/... se revisan contra los archivos del repo.
+          # LinkedIn bloquea bots (999) y las URLs de tavolab.io no existen hasta desplegar.
+          args: >-
+            --no-progress
+            --root-dir ${{ github.workspace }}
+            --exclude 'linkedin\.com'
+            --exclude 'fonts\.(googleapis|gstatic)\.com'
+            --exclude '^https://tavolab\.io'
+            index.html
