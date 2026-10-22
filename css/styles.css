@@ -255,7 +255,6 @@ nav.open .bars i:nth-child(1){transform:translateY(5px) rotate(45deg)}nav.open .
   .lead{font-size:16.5px;margin:16px 0 24px}
   .btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .btns .btn{justify-content:center;padding:12px 14px}
-  .btns .btn.primary{grid-column:1/-1}
   .marquee{padding-block:16px}
   .chip{padding:8px 12px;font-size:14px}.chip svg{width:22px;height:22px}
   section{padding-block:44px}
