@@ -35,6 +35,7 @@
     clr.hidden=G==='all'&&!TT;
   }
   draw();
+  document.getElementById('nproj').textContent=cards.length+' en este sitio';
   const Lg=document.getElementById('langs'),mx=count[order[0]];
   order.slice(0,6).forEach(t=>{const d=document.createElement('div');d.className='bar';d.innerHTML='<span>'+t+'</span><i style="width:'+Math.round(count[t]/mx*100)+'%"></i><em>'+count[t]+'</em>';Lg.appendChild(d)});
 })();
